@@ -38,21 +38,19 @@ public class Main {
             count1 += array[i];
         }
         result = count1 / 5;
-        System.out.println(count1 / 5);
+        System.out.println(count1 / array.length);
 
         System.out.println();
         //Task#4
 
         char [] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (int i = reverseFullName.length - 1; i > 0; i--) {
-            for (int j = 0; j < reverseFullName.length - 1; j++) {
-                char temp = reverseFullName[j];
-                reverseFullName[j] = reverseFullName[i];
-                reverseFullName[i] = temp;
+        for (int i = reverseFullName.length - 1; i >= 0; i--) {
+            if (i == 0) {
+                System.out.println(reverseFullName[i]);
                 break;
             }
+            System.out.print(reverseFullName[i] + ", ");
         }
-        System.out.println(Arrays.toString(reverseFullName));
 
     }
 }
